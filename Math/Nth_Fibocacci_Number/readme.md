@@ -9,18 +9,18 @@ The first fibonacci number F2 = 1
 The nth fibonacci number Fn = Fn-1 + Fn-2 (n > 2)
 ```
 
-Problem Constraints
+### Problem Constraints
 ```
 1 <= A <= 109.
 ```
 
-Input Format 
+#### Input Format 
 
 ```
 First argument is an integer A.
 ```
 
-Output Format
+#### Output Format
 
 ```
 Return a single integer denoting Ath fibonacci number modulo 109 + 7.
