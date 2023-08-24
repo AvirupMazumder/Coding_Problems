@@ -1,7 +1,7 @@
 ### Problem Description
 
 ```
-Given an integer A you need to find the Ath fibonacci number modulo 109 + 7.
+Given an integer A you need to find the Ath Fibonacci number modulo 10^9 + 7.
 
 The first fibonacci number F1 = 1
 
@@ -24,7 +24,7 @@ The first argument is an integer A.
 #### Output Format
 
 ```
-Return a single integer denoting Ath fibonacci number modulo 109 + 7.
+Return a single integer denoting Ath Fibonacci number modulo 10^9 + 7.
 ```
 
 #### Example Input
