@@ -12,7 +12,7 @@ The nth fibonacci number Fn = Fn-1 + Fn-2 (n > 2)
 
 ### Problem Constraints
 ```
-1 <= A <= 109.
+1 <= A <= 10^9.
 ```
 
 #### Input Format 
