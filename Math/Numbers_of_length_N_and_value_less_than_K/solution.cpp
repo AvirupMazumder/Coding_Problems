@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 int BinarySearch(int num,vector<int> A){
   int l=0;
   int r=A.size()-1;
@@ -26,18 +28,19 @@ int BinarySearch(int num,vector<int> A){
 
 int solve(vector<int> &A, int B, int C) {
   int ans=0;
-  string temp=to_string(C);
+  string str=to_string(C);
   if(A.size()==0){
     return 0;
   }
   if(C==0){
     return 0;
   }
-  if(B>temp.size()){
+  if(B>str.size()){
     return 0;
   }
-  else if(B<temp.size()){
+  else if(B<str.size()){
     if(A[0]==0){
+      //Number cannot start with 0 hence excluding 0 at 1st position  
       ans+=pow(A.size(),B-1)*(A.size()-1);
       if(B==1){
         ans++;
@@ -50,18 +53,22 @@ int solve(vector<int> &A, int B, int C) {
   }
   else{
     int i=0;
-    while(i<temp.size()){
-      bool intPresent=false;
-      int j=BS(temp[i]-48,A);
+    while(i<str.size()){
+      //ifPresent is a boolean variable to store whether the digits present in String str is present in vector A or not  
+      bool ifPresent=false;
+
+      //j denotes number of digits in vector A which is less than or equal to character at i-th position
+      int j=BinarySearch(str[i]-48,A);
       if(j==-1){
         return ans;
       }
-      if(A[j]==(temp[i]-48)){
-        intPresent=true;
+      if(A[j]==(str[i]-48)){
+        ifPresent=true;
         j--;
       }
       if(i==0){
         if(A[0]==0){
+          //Number cannot start with 0 hence excluding 0 at 1st position  
           ans+=((j)*pow(A.size(),B-1-i));
           if(B==1){
             ans++;
@@ -74,11 +81,25 @@ int solve(vector<int> &A, int B, int C) {
       else{
         ans+=(j+1)*pow(A.size(),B-1-i);
       }
-      if(!intPresent){
+      if(ifPresent==false){
         return ans;
       }
       i++;
     }
     return ans;
   }
+}
+
+int main()
+{
+    int B,C;
+    int n;
+    cin>>n;
+    vector<int> A(n)
+    for(int i=0;i<n;i++)
+    {
+        cin>>A[i];
+    }
+    cin>>B>>C;
+    cout<<solve(A,B,C);
 }
