@@ -1,8 +1,8 @@
 ### Problem Description
 
-```
-Given an integer A you need to find the Ath Fibonacci number modulo 10 <sup> 9 </sup> + 7.
 
+Given an integer A you need to find the Ath Fibonacci number modulo 10 <sup> 9 </sup> + 7.
+```
 The first fibonacci number F1 = 1
 
 The first fibonacci number F2 = 1
