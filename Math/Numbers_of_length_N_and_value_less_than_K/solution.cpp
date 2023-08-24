@@ -40,7 +40,7 @@ int solve(vector<int> &A, int B, int C) {
   }
   else if(B<str.size()){
     if(A[0]==0){
-      //Number cannot start with 0 hence excluding 0 at 1st position  
+      //Number cannot start with 0 hence excluding 0 at the 1st position  
       ans+=pow(A.size(),B-1)*(A.size()-1);
       if(B==1){
         ans++;
@@ -57,7 +57,7 @@ int solve(vector<int> &A, int B, int C) {
       //ifPresent is a boolean variable to store whether the digits present in String str is present in vector A or not  
       bool ifPresent=false;
 
-      //j denotes number of digits in vector A which is less than or equal to character at i-th position
+      //j denotes the number of digits in vector A that is less than or equal to the character at I th position
       int j=BinarySearch(str[i]-48,A);
       if(j==-1){
         return ans;
@@ -94,12 +94,14 @@ int main()
 {
     int B,C;
     int n;
+    int i;
     cin>>n;
-    vector<int> A(n)
-    for(int i=0;i<n;i++)
+    vector<int> A(n);
+    for(i=0;i<n;i++)
     {
         cin>>A[i];
     }
     cin>>B>>C;
-    cout<<solve(A,B,C);
+    cout<<solve(A,B,C)<<endl;
+    return 0;
 }
