@@ -1,3 +1,19 @@
+/*          
+            |1    1|
+    Let A1= |1    0| ,
+                              |2    1| 
+    A2   =    A1 * A1   =     |1    1|
+    
+                          |2    1|     |1    1|
+    A3   = A1* A1 * A1 =  |1    1|  *  |1    0|
+                                                     |3    2|
+                                                  A3=|2    1|
+              |Fn+1    Fn  |  
+    So,  An = |Fn      Fn-1|
+
+
+    In this problem, we are using Matrix multiplication using Divide and Conquer 
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define M1 1000000007
