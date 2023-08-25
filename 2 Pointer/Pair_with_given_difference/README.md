@@ -12,8 +12,8 @@ Return 1 if any such pair exists else return 0.
 
 ```
     1 <= N <= 10^5
-    -103 <= A[i] <= 10^3
-    -105 <= B <= 10^5
+    -10^3 <= A[i] <= 10^3
+    -10^5 <= B <= 10^5
 ```
 
 
