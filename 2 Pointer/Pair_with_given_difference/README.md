@@ -32,7 +32,7 @@ Second argument is an integer B.
 Return 1 if any such pair exists else return 0.
 ```
 
-Example Input
+##### Example Input
 
 ```
 Input 1:
@@ -47,7 +47,7 @@ Input 2:
 ```
 
 
-Example Output
+##### Example Output
 
 ```
 Output 1:
@@ -59,7 +59,7 @@ Output 2:
  1
 ```
 
-Example Explanation
+##### Example Explanation
 
 ```
 Explanation 1:
