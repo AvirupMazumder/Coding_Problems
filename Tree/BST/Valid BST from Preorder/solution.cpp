@@ -7,7 +7,8 @@ Here we find the next greater element and after finding next greater, if we find
     3. Do following for every element pre[i]
        a. If pre[i] is smaller than current root, return false.
        b.  Keep removing elements from stack while pre[i] is greater
-        then stack top. Make the last removed item as new root (to
+        then stack top. Here check for any duplicate elements while comparing pre[i]
+        with stack top, return false.Make the last removed item as new root (to
         be compared next).
         At this point, pre[i] is greater than the removed root
         (That is why if we see a smaller element in step a), we
