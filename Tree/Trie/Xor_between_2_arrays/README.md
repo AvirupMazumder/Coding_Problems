@@ -9,9 +9,9 @@ Return this maximum xor value.
 #### Problem Constraints
 
 ```
-1 <= |A|, |B| <= 105
+1 <= |A|, |B| <= 10^5
 
-1 <= A[i], B[i] <= 109
+1 <= A[i], B[i] <= 10^9
 ```
 
 
