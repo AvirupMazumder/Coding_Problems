@@ -82,3 +82,17 @@ int solve(vector<int> &A, vector<int> &B) {
     }
     return calculate(root,B);
 }
+int main()
+{
+    int n;
+    cin>>n;
+    vector<int> A(n);
+    for(int i=0;i<n;i++)
+    {
+        cin>>A[i];
+    }
+    int B;
+    cin>>B;
+    cout<<solve(A,B);
+    return 0;
+}
