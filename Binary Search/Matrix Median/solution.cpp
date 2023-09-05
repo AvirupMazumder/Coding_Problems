@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int findMedian(vector<vector<int> > &A) {
-    int l = 0, r = INT_MAX;
+    int l = 0, r = 1e9;
     int mid, req = (int)A.size() * (int)A[0].size();
     assert(A.size()*A[0].size()<=1000000);
     assert(req % 2);
