@@ -47,7 +47,7 @@ string simplifyPath(string A) {
 int main()
 {
   string s;
-  cin>>>s;
+  cin>>s;
   cout<<simplifyPath(s)<<endl;
   return 0;
 }
