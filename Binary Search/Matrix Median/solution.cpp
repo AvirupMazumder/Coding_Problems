@@ -18,15 +18,15 @@ int findMedian(vector<vector<int> > &A) {
     }   
     return r;
 }
-int main()
-{
-    int n;
-    cin>>n;
-    vector<int> A(n);
-    for(int i=0;i<n;i++)
-    {
-        cin>>A[i];
-    }
-    cout<< findMedian(A)<<endl;
-    return 0;
+int main() {
+  int m, n;
+  cin >> m >> n;
+  vector<vector<int>> A(m, vector<int>(n));
+  for (int i = 0; i < m; i++) {
+    for (int j = 0; j < n; j++)
+      cin >> A[i][j];
+  }
+  cout << findMedian(A) << endl;
+  return 0;
 }
+
