@@ -3,7 +3,12 @@
 
 ```
 A frog has to cross a river. The river has a path of floating stones on which the frog can jump and cross the river.
-There are n stones in the path to cross the river. First stone in the path to cross the river is numbered 1 and the last stone is numbered n. But some of the stones out of these n stones are flawed and they sink when the frog jumps on them, therefore the frog cant jump on those stones. One jump takes 1 unit of time and the frog wants to cross the river in at most k units of time. Frog is initially at one side of the river (i.e 0th stone). You are given an array in which you are provided the indices of the flawed stones. Your task is to minimize the maximum jump size (i.e the number of stones he skips in one jump) that the frog should take to reach the other end of the river (i.e to n+1 stone ) in at most k unit of time.
+There are n stones in the path to cross the river. First stone in the path to cross the river is numbered 1 and the last stone is numbered n. 
+But some of the stones out of these n stones are flawed and they sink when the frog jumps on them, therefore the frog cant jump on those stones.
+One jump takes 1 unit of time and the frog wants to cross the river in at most k units of time. Frog is initially at one side of the river (i.e 0th stone).
+You are given an array in which you are provided the indices of the flawed stones.
+Your task is to minimize the maximum jump size (i.e the number of stones he skips in one jump) that the frog should take to reach the other end of the river 
+(i.e to n+1 stone ) in at most k unit of time.
 ```
 
 #### Input format
