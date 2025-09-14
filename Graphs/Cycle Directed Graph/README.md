@@ -50,6 +50,5 @@ The given graph contain cycle 1 -> 3 -> 4 -> 1 or the cycle 1 -> 2 -> 4 -> 1.
 ```
 2 <= n <= 10^5
 1 <= edges.size <= min(200000,A(A-1))
-```
-
 1 <= edges[i][0], edges[i][1] <= n
+```
