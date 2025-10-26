@@ -3,7 +3,7 @@ public class Solution {
     private int findMinimumCost(int frndCpty, Map<Integer, Integer> costPerFood) {
         //int N = B.size();
         int N = costPerFood.size();
-        int[] dp = new int[frndCpty + 1];
+        int[][] dp = new int[N][frndCpty + 1];
         int i = 0;
         Iterator<Map.Entry<Integer, Integer>> itr = costPerFood.entrySet().iterator();
         while(itr.hasNext()) {
@@ -14,24 +14,24 @@ public class Solution {
             for(int j = 0; j <= frndCpty; j++) {
                 if(i == 0) {
                     if(j < foodCpty) {
-                        dp[j] = 0;
+                        dp[i][j] = 0;
                     } else {
-                        dp[j] = cost * (j / foodCpty);
+                        dp[i][j] = cost * (j / foodCpty);
                     }
                 } else {
                     if(j < foodCpty) {
-                        dp[j] = dp[j];
+                        dp[i][j] = dp[i - 1][j];
                     } else {
-                        if(dp[j] == 0) {
-                            dp[j] = cost * (j / foodCpty) + dp[j % foodCpty];
+                        if(dp[i - 1][j] == 0) {
+                            dp[i][j] = cost * (j / foodCpty) + dp[i - 1][j % foodCpty];
                         } else {
                             int m = j/foodCpty;
                             int val = Integer.MAX_VALUE;
                             for(int k = 1; k <= m; k++) {
-                                val = Math.min(val, cost * k + dp[j - foodCpty * k]);
+                                val = Math.min(val, cost * k + dp[i - 1][j - foodCpty * k]);
                             }
                             //dp[j] = Math.min(dp[j], cost * (j / foodCpty) + dp[j % foodCpty]);
-                            dp[j] = Math.min(dp[j], val);
+                            dp[i][j] = Math.min(dp[i - 1][j], val);
                         }
                     }
                 }
@@ -41,7 +41,7 @@ public class Solution {
             i++;
         }
         //System.out.println("Vaue = " +dp[frndCpty]);
-        return dp[frndCpty];
+        return dp[N - 1][frndCpty];
     }
     
     // DO NOT MODIFY THE LIST. IT IS READ ONLY
